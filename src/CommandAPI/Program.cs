@@ -14,7 +14,16 @@ namespace CommandAPI
         public static void Main(string[] args)
         {
             CreateHostBuilder(args).Build().Run();
+            //IHostBuilder hb = CreateHostBuilder2(args);
+            //IHost h = hb.Build();
+            //h.Run();
         }
+
+        //public static IHostBuilder CreateHostBuilder2(string[] args)
+        //{
+        //    var h = Host.CreateDefaultBuilder(args);
+        //    return h.ConfigureWebHostDefaults(webBuilder => webBuilder.UseStartup<Startup>() );
+        //}
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
