@@ -18,7 +18,7 @@ namespace CommandAPI
 {
     public class Startup
     {
-
+        // coment
         public Startup(IConfiguration config)
         {
             Configuration = config;
