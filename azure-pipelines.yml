@@ -17,15 +17,7 @@ steps:
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
 
-- task: DownloadBuildArtifacts@0
+- task: DownloadPipelineArtifact@2
   inputs:
-    buildType: 'specific'
-    project: '078f1e6f-c437-441a-ace5-4af6ab33087e'
-    pipeline: '2'
-    buildVersionToDownload: 'latest'
-    downloadType: 'single'
-    artifactName: '*'
-    itemPattern: '*'
-    downloadPath: 'D:\SebG Enterprizes HQ\Project - Web API Tutorial 2\Artifacts'
-    checkDownloadedFiles: true
-    extractTars: true
+    buildType: 'current'
+    targetPath: 'D:\SebG Enterprizes HQ\Project - Web API Tutorial 2\Artifacts'
