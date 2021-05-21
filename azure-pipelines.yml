@@ -19,6 +19,13 @@ steps:
 
 - task: DownloadBuildArtifacts@0
   inputs:
-    buildType: 'current'
-    downloadType: 'specific'
+    buildType: 'specific'
+    project: '078f1e6f-c437-441a-ace5-4af6ab33087e'
+    pipeline: '2'
+    buildVersionToDownload: 'latest'
+    downloadType: 'single'
+    artifactName: '*'
+    itemPattern: '*'
     downloadPath: 'D:\SebG Enterprizes HQ\Project - Web API Tutorial 2\Artifacts'
+    checkDownloadedFiles: true
+    extractTars: true
