@@ -17,7 +17,3 @@ steps:
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
 
-- task: DownloadPipelineArtifact@2
-  inputs:
-    buildType: 'current'
-    targetPath: 'D:\SebG Enterprizes HQ\Project - Web API Tutorial 2\Artifacts'
